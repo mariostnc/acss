@@ -1,0 +1,9 @@
+<h1>Edit your Bio</h1>
+<%= form_with model: @bio, url: dashboard_path, method: :patch do |f| %>
+  <p>Username: <%= f.text_field :username %></p>
+  <p>Bio: <%= f.text_area :bio %></p>
+  <p>GitHub: <%= f.text_field :github %></p>
+  <p>Instagram: <%= f.text_field :instagram %></p>
+  <p>Discord: <%= f.text_field :discord %></p>
+  <%= f.submit "Save" %>
+<% end %>
